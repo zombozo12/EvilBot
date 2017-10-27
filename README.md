@@ -16,7 +16,7 @@ A Simple Evil Bot on Line Messenger using Unofficial Library LineCross for PHP
 
 I recommend you to use terminal from linux, ubuntu, or another linux distro 
 
- - PHP > 5.x
+ - PHP > 7.x
 	 - php-curl
 		```sudo apt-get install php-curl```
 		
