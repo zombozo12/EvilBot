@@ -3,12 +3,14 @@ date_default_timezone_set('Asia/Tokyo');
 include 'LineCross.php';
 use x9119x\LineCross;
 
-const AUTH_TOKEN = "";
+const AUTH_TOKEN = ""; //PUT YOUR AuthToken HERE
+const ADMIN_MID  = ""; //YOUR LINE UNIQUE ID FROM LINE DATABASE
 
-$AuthInfo = new \x9119x\AuthInfo(AUTH_TOKEN);
+
+$AuthInfo = new \x9119x\AuthInfo(AUTH_TOKEN); //Put AUTH_TOKEN HERE
 
 try{
-    $Line = new LineCross();
+    $Line = new LineCross($AuthInfo); //Put $AuthInfo HERE
 }catch(x9119x\TalkException $e) {
     echo "\033[0;31m[ERROR]\033[0m".$e->reason . PHP_EOL;
     exit;
@@ -69,10 +71,12 @@ class Pooling{
 
                     $args = explode(" ", $text);
                     if($args[0] == "members"){
-                        if($this->_from != "u5e7641aec03eaaf4513227c7aeef5c97"){
-                            $this->Line->LineService->sendMessage("who the fuck are you? you're not admin!", $Op->message->to);
+                        if($this->_from != ADMIN_MID){
+                            $this->Line->LineService->sendMessage("who are you? you're not admin!", $Op->message->to);
                             return;
                         }
+
+                        //GET GROUP INFO
                         $getGroupInfo = $this->Line->LineService->getGroup($Op->message->to);
 
                         $members = "";
@@ -82,29 +86,15 @@ class Pooling{
                         }
                         $this->Line->LineService->sendMessage($members, $Op->message->to);
                     }else if($args[0] == strtolower("kick")){
-                        //GET ACCEPTED ACCOUNT
-                        $getIDs = json_decode(file_get_contents("debugGroupMLHY"), true);
-                        $accIDs = array();
-
-                        foreach($getIDs["members"] as $key){
-                            array_push($accIDs, $key["mid"]);
-                        }
-                        //CHECK ACCEPTED ACCOUNT
-                        if(!in_array($this->_from, $accIDs)){
-                            $this->Line->LineService->sendMessage("who the fuck are you? you're not admin!", $Op->message->to);
-                            return;
-                        }
-
-                        //CHECK GROUP
-                        if($Op->message->to == "c8f25b930e19bd85e65c856de0f44399a"){
-                            $this->Line->LineService->sendMessage("u can't kick this group, BITCH!", $Op->message->to);
+                        if($this->_from != ADMIN_MID){
+                            $this->Line->LineService->sendMessage("who are you? you're not admin!", $Op->message->to);
                             return;
                         }
 
                         //GET GROUP INFO
                         $getGroupInfo = $this->Line->LineService->getGroup($Op->message->to);
 
-                        //THIS SHIT IS TO GET ALL THE MEMBERS IN THE GROUP
+                        //GET ALL THE MEMBERS IN THE GROUP
                         $memIDs = array();
                         $count = 0;
                         foreach($getGroupInfo->members as $key){
@@ -159,24 +149,9 @@ class Pooling{
                         echo $ex->getMessage().PHP_EOL;
                     }
 
-
-                    //GET GROUP INFO BY GROUP ID
-                    //$getGroupInfo       = $this->Line->LineService->getGroup($getGroupIDByInvite[0]);
-
                     //GET GROUP COMPACT
                     $getCompactGroup    = $this->Line->LineService->getCompactGroup($getGroupIDByInvite[0]);
 
-                    //GET LIST MEMBERS OF GROUP
-                    /**
-                    ob_start();
-                    foreach($getCompactGroup as $key){
-                        print_r($key);
-                    }
-                    $y = ob_get_clean();
-                     */
-                    //file_put_contents("./debugGroupMLHY", json_encode($getCompactGroup, 0));
-
-                    //yield $this->MessageContactBuilder((array) $getGroupInfo->creator);;
                     yield $getCompactGroup;
                     break;
                 default:
