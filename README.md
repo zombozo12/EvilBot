@@ -36,7 +36,7 @@ I recommend you to use terminal from linux, ubuntu, or another linux distro
 	- Open this url by using QR Code Generation
 		http://www.qr-code-generator.com/
 	- Scan the QR Code from your **Line Messenger on your phone**
-	- Voila! You got AuthToken, put this in
+	- Voila! You got AuthToken, and put this in
 	```php
 	const AUTH_TOKEN = "here";
 	```
@@ -48,6 +48,7 @@ I recommend you to use terminal from linux, ubuntu, or another linux distro
 	```php
 	 $Line = new LineCross($AuthInfo);
 	```
+	- **If you forget the AuthToken, it's stored in auth.txt**
 	- Installation is complete.
 
 
