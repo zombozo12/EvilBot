@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c35a7a49-0109-4e88-80b1-eba8a7b873b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evilbot.php" afterPath="$PROJECT_DIR$/evilbot.php" />
-    </list>
+    <list default="true" id="c35a7a49-0109-4e88-80b1-eba8a7b873b0" name="Default" comment="another fixing readme.md" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509102293163</updated>
-      <workItem from="1509102294355" duration="1279000" />
+      <workItem from="1509102294355" duration="1334000" />
     </task>
     <task id="LOCAL-00001" summary="fixing php version">
       <created>1509102570055</created>
@@ -171,7 +168,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1279000" />
+    <option name="totallyTimeSpent" value="1334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
