@@ -53,16 +53,16 @@ I recommend you to use terminal from linux, ubuntu, or another linux distro
 
 2. Bot Usage
 	
-	1. Evil Feature
-	- Invite the bot into a group and wait untill the bot join to the group.
-	- Type the command which is "kick" (lowercase) in group chat.
-	- The bot start kicking peoples from the group
-	- The bot **CANNOT** kick above 50 account a day.
+	- Evil Feature
+		- Invite the bot into a group and wait untill the bot join to the group.
+		- Type the command which is "kick" (lowercase) in group chat.
+		- The bot start kicking peoples from the group
+		- The bot **CANNOT** kick above 50 account a day.
 
-	2. Get Display Picture
-	- Share contact that you want to get his/her Display Picture
-	- Open the link "Picture URL"
-	- And download it.
+	- Get Display Picture
+		- Share contact that you want to get his/her Display Picture
+		- Open the link "Picture URL"
+		- And download it.
  
 
 ## Author
