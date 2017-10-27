@@ -4,9 +4,9 @@ EvilBot
 
 ## DISCLAIMER
 
-I do not own the source code of LineCross, I developed it.
+I do not claim the source code of LineCross to be mine. I just use & developed it.
 
-Usage of EvilBot for kicking group targets without prior mutual consent is **inappropriate**. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this bot chat.
+Usage of EvilBot for kicking group targets without prior mutual consent is **inappropriate**. It is the end user's responsibility to obey all applicable local. Developers assume no liability and are not responsible for any misuse or damage caused by this bot chat.
 
 ## Description
 
