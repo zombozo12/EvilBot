@@ -28,7 +28,7 @@ I recommend you to use terminal from linux, ubuntu, or another linux distro
 	$Line = new LineCross();
 	```
 	- Use Command Prompt to run this file
-	```php
+	```
 	php evilbot.php
 	```
 	- Get QR Code Link
