@@ -12,7 +12,7 @@ Usage of EvilBot for kicking group targets without prior mutual consent is **ina
 
 A Simple Evil Bot on Line Messenger using Unofficial Library LineCross for PHP
 
-## Requierments
+## Requirements
 
 I recommend you to use terminal from linux, ubuntu, or another linux distro 
 
