@@ -58,7 +58,7 @@ I recommend you to use terminal from linux, ubuntu, or another linux distro
 		- Invite the bot into a group and wait untill the bot join to the group.
 		- Type the command which is "kick" (lowercase) in group chat.
 		- The bot start kicking peoples from the group
-		- The bot **CANNOT** kick above 50 account a day.
+		- The bot **CANNOT** kick above 100 account a day. (est.)
 
 	- Get Display Picture
 		- Share contact that you want to get his/her Display Picture
